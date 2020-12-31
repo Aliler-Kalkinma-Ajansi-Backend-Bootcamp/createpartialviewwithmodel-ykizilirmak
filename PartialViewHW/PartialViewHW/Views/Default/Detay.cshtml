@@ -1,0 +1,39 @@
+﻿@model PartialViewHW.Models.urun
+
+@{
+    ViewData["Title"] = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detay</h2>
+
+<div>
+    <h4>urun</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.adi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.adi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fiyati)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fiyati)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.kullanilmamislikdurumu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.kullanilmamislikdurumu)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<partial name="~/Views/_Partial.cshtml" />
